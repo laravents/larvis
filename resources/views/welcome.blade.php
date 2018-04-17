@@ -62,6 +62,8 @@
             <a href="https://github.com/laravents/larvis" target="_blank">GitHub</a>
             <a href="https://twitter.com/laraventscom" target="_blank">Twitter</a>
         </div>
+        <br>
+        <a href="https://slack.com/oauth/authorize?client_id=348096430082.347401510272&scope=bot"><img alt="Add to Slack" height="40" width="139" src="https://platform.slack-edge.com/img/add_to_slack.png" srcset="https://platform.slack-edge.com/img/add_to_slack.png 1x, https://platform.slack-edge.com/img/add_to_slack@2x.png 2x" /></a>
     </div>
 </div>
 </body>
