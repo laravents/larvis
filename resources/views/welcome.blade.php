@@ -37,11 +37,11 @@
         .links a {
             font-size: 1.25rem;
             text-decoration: none;
-            color: black;
+            color: #e66c61;
             margin: 10px;
         }
 
-        @media all and (max-width: åpx) {
+        @media all and (max-width: 500px) {
 
             .links {
                 display: flex;
