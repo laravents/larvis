@@ -10,7 +10,7 @@ class WelcomeToTelegramConversation extends Conversation
     {
         $this->say('Hey!');
     }
-    
+
     /**
      * Start the conversation.
      *

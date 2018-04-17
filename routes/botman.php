@@ -1,14 +1,14 @@
 <?php
 
+use Carbon\Carbon;
 use BotMan\BotMan\BotMan;
 use BotMan\BotMan\Middleware\ApiAi;
-use Carbon\Carbon;
 
 $botman = resolve('botman');
 $dialogflow = ApiAi::create(env('DIALOG_FLOW_KEY'))->listenForAction();
 $botman->middleware->received($dialogflow);
 
-$botman->group(['driver' => \BotMan\Drivers\Telegram\TelegramDriver::class], function($bot) use ($botman, $dialogflow) {
+$botman->group(['driver' => \BotMan\Drivers\Telegram\TelegramDriver::class], function ($bot) use ($botman, $dialogflow) {
     $botman->hears('/start', function (BotMan $bot) {
         $bot->typesAndWaits(2);
         $bot->startConversation(new \App\Http\Conversations\WelcomeToTelegramConversation);
@@ -33,11 +33,11 @@ $botman->group(['driver' => \BotMan\Drivers\Telegram\TelegramDriver::class], fun
         $currentYear = Carbon::now()->year;
 
         $bot->typesAndWaits(2);
-        $bot->reply($apiReply . " $currentYear");
+        $bot->reply($apiReply." $currentYear");
     })->middleware($dialogflow);
 });
 
-$botman->group(['driver' => \BotMan\Drivers\Web\WebDriver::class], function($bot) use ($botman, $dialogflow) {
+$botman->group(['driver' => \BotMan\Drivers\Web\WebDriver::class], function ($bot) use ($botman, $dialogflow) {
     $botman->hears('smalltalk.*', function (BotMan $bot) {
         $extras = $bot->getMessage()->getExtras();
         $apiReply = $extras['apiReply'];
@@ -55,6 +55,6 @@ $botman->group(['driver' => \BotMan\Drivers\Web\WebDriver::class], function($bot
 
         $currentYear = Carbon::now()->year;
 
-        $bot->reply($apiReply . " $currentYear");
+        $bot->reply($apiReply." $currentYear");
     })->middleware($dialogflow);
 });
