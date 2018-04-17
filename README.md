@@ -23,7 +23,7 @@ The bot helps you on the website (using the widget) or telegram to find laravel 
         aboutLink: 'https://github.com/laravents/larvis'
     };
 </script>
-
+<script src='https://cdn.jsdelivr.net/npm/botman-web-widget@0/build/js/widget.js'></script>
 ```
 
 ## Security Vulnerabilities
