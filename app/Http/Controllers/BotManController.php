@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use BotMan\BotMan\Middleware\ApiAi;
 use BotMan\BotMan\BotMan;
 use Illuminate\Http\Request;
 use App\Conversations\ExampleConversation;
