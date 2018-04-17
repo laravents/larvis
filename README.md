@@ -1,23 +1,33 @@
-<p align="center"><img height="188" width="198" src="https://botman.io/img/botman.png"></p>
-<h1 align="center">BotMan Studio</h1>
+<p align="center"><img height="188" width="198" src="https://larvis.laravents.com/robot.png"></p>
+<h1 align="center">Larvis</h1>
 
-## About BotMan Studio
+## About Larvis
 
-While BotMan itself is framework agnostic, BotMan is also available as a bundle with the great [Laravel](https://laravel.com) PHP framework. This bundled version is called BotMan Studio and makes your chatbot development experience even better. By providing testing tools, an out of the box web driver implementation and additional tools like an enhanced CLI with driver installation, class generation and configuration support, it speeds up the development significantly.
+Larvis is a chatbot built with Botman.io, an framework agnostic Chatbot-Framework.
+The bot helps you on the website (using the widget) or telegram to find laravel related events.
 
-## Documentation
+## How to implement the widget
 
-You can find the BotMan and BotMan Studio documentation at [http://botman.io](http://botman.io).
-
-## Support the development
-**Do you like this project? Support it by donating**
-
-- PayPal: [Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=m%2epociot%40googlemail%2ecom&lc=CY&item_name=BotMan&no_note=0&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest)
-- Patreon: [Donate](https://www.patreon.com/botman)
+```html
+<script>
+    var botmanWidget = {
+        frameEndpoint: 'https://larvis.laravents.com/botman/widget',
+        chatServer: 'https://larvis.laravents.com/botman',
+        mainColor: '#ffffff',
+        bubbleBackground: '#ffffff',
+        title: 'Larvis',
+        bubbleAvatarUrl: 'https://larvis.laravents.com/robot.png',
+        desktopHeight: 600,
+        introMessage: 'Welcome to laravents.com! 👋 <br><br> I´m Larvis. Your personal 🤖 when it comes to any laravel related events on the 🌍. <br><br> Here´s a 📝 with commands, i understand: <br><br> - Show me conferences <br> - Show me meetups <br> - Show me hackathons',
+        placeholderText: 'Ask me about any events for laravel..',
+        aboutLink: 'https://github.com/laravents/larvis'
+    };
+</script>
+```
 
 ## Security Vulnerabilities
 
-If you discover a security vulnerability within BotMan or BotMan Studio, please send an e-mail to Marcel Pociot at m.pociot@gmail.com. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within BotMan or BotMan Studio, please send an e-mail to Florian Wartner at florian@laravents.com. All security vulnerabilities will be promptly addressed.
 
 ## License
 
