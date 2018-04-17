@@ -23,6 +23,7 @@ The bot helps you on the website (using the widget) or telegram to find laravel 
         aboutLink: 'https://github.com/laravents/larvis'
     };
 </script>
+
 ```
 
 ## Security Vulnerabilities
