@@ -3,7 +3,7 @@
 
 ## About Larvis
 
-Larvis is a chatbot built with Botman.io, an framework agnostic Chatbot-Framework.
+Larvis is a chatbot built with [BotMan](https://botman.io), an framework agnostic Chatbot-Framework.
 The bot helps you on the website (using the widget) or telegram to find laravel related events.
 
 
