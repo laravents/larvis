@@ -58,5 +58,3 @@ $botman->group(['driver' => \BotMan\Drivers\Web\WebDriver::class], function($bot
         $bot->reply($apiReply . " $currentYear");
     })->middleware($dialogflow);
 });
-
-$botman->listen();
