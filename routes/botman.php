@@ -37,7 +37,7 @@ $botman->group(['driver' => \BotMan\Drivers\Telegram\TelegramDriver::class], fun
     })->middleware($dialogflow);
 });
 
-$botman->group(['driver' => \BotMan\Drivers\Slack\SlackDriver::class], function ($bot) use ($botman, $dialogflow) {
+$botman->group(['driver' => \BotMan\Drivers\Slack\SlackRTMDriver::class], function ($bot) use ($botman, $dialogflow) {
     $botman->hears('smalltalk.*', function (BotMan $bot) {
         $extras = $bot->getMessage()->getExtras();
         $apiReply = $extras['apiReply'];

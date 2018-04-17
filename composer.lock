@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "b6a842e1b6c20818b2794547b223b640",
+    "content-hash": "f928ea7754ed7dea464d01f365ac4912",
     "packages": [
         {
             "name": "botman/botman",
