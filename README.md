@@ -6,6 +6,11 @@
 Larvis is a chatbot built with Botman.io, an framework agnostic Chatbot-Framework.
 The bot helps you on the website (using the widget) or telegram to find laravel related events.
 
+
+## Telegram
+
+Larvis is also available on telegram: [https://t.me/larvis_bot](https://t.me/larvis_bot)
+
 ## How to implement the widget
 
 ```html
