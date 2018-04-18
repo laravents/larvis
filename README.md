@@ -33,7 +33,7 @@ Larvis is also available on telegram: [https://t.me/larvis_bot](https://t.me/lar
 
 ## Security Vulnerabilities
 
-If you discover a security vulnerability within BotMan or BotMan Studio, please send an e-mail to Florian Wartner at florian@laravents.com. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within Larvis, please send an e-mail to Florian Wartner at florian@laravents.com. All security vulnerabilities will be promptly addressed.
 
 ## License
 
