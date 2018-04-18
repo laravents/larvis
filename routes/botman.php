@@ -78,7 +78,7 @@ $botman->group(['driver' => \BotMan\Drivers\Slack\SlackDriver::class], function 
 
         $bot->typesAndWaits(2);
         $bot->reply($apiReply);
-    }
+    })->middleware($dialogflow);
 });
 
 $botman->group(['driver' => \BotMan\Drivers\Web\WebDriver::class], function ($bot) use ($botman, $dialogflow) {
@@ -110,5 +110,5 @@ $botman->group(['driver' => \BotMan\Drivers\Web\WebDriver::class], function ($bo
 
         $bot->typesAndWaits(2);
         $bot->reply($apiReply);
-    }
+    })->middleware($dialogflow);
 });
