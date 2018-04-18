@@ -14,7 +14,7 @@ $botman->group(['driver' => \BotMan\Drivers\Telegram\TelegramDriver::class], fun
         $bot->startConversation(new \App\Http\Conversations\WelcomeToTelegramConversation);
     });
 
-    $botman->fallback(function($bot) {
+    $botman->fallback(function ($bot) {
         $bot->reply('Sorry, I did not understand these commands. Here is a list of commands I understand: ...');
     });
 
@@ -52,7 +52,7 @@ $botman->group(['driver' => \BotMan\Drivers\Telegram\TelegramDriver::class], fun
 });
 
 $botman->group(['driver' => \BotMan\Drivers\Slack\SlackDriver::class], function ($bot) use ($botman, $dialogflow) {
-    $botman->fallback(function($bot) {
+    $botman->fallback(function ($bot) {
         $bot->reply('Sorry, I did not understand these commands. Here is a list of commands I understand: ...');
     });
 
@@ -90,7 +90,7 @@ $botman->group(['driver' => \BotMan\Drivers\Slack\SlackDriver::class], function 
 });
 
 $botman->group(['driver' => \BotMan\Drivers\Web\WebDriver::class], function ($bot) use ($botman, $dialogflow) {
-    $botman->fallback(function($bot) {
+    $botman->fallback(function ($bot) {
         $bot->reply('Sorry, I did not understand these commands. Here is a list of commands I understand: ...');
     });
 
