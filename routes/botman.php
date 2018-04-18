@@ -36,7 +36,7 @@ $botman->group(['driver' => \BotMan\Drivers\Telegram\TelegramDriver::class], fun
         $bot->reply($apiReply." $currentYear");
     })->middleware($dialogflow);
 
-    $botman->hears('intent.conferences.show', function (BotMan $bot) {
+    $botman->hears('conferences.show', function (BotMan $bot) {
         $extras = $bot->getMessage()->getExtras();
         $apiReply = $extras['apiReply'];
         $apiAction = $extras['apiAction'];
@@ -70,7 +70,7 @@ $botman->group(['driver' => \BotMan\Drivers\Slack\SlackDriver::class], function 
         $bot->reply($apiReply." $currentYear");
     })->middleware($dialogflow);
 
-    $botman->hears('intent.conferences.show', function (BotMan $bot) {
+    $botman->hears('conferences.show', function (BotMan $bot) {
         $extras = $bot->getMessage()->getExtras();
         $apiReply = $extras['apiReply'];
         $apiAction = $extras['apiAction'];
@@ -102,7 +102,7 @@ $botman->group(['driver' => \BotMan\Drivers\Web\WebDriver::class], function ($bo
         $bot->reply($apiReply." $currentYear");
     })->middleware($dialogflow);
 
-    $botman->hears('intent.conferences.show', function (BotMan $bot) {
+    $botman->hears('conferences.show', function (BotMan $bot) {
         $extras = $bot->getMessage()->getExtras();
         $apiReply = $extras['apiReply'];
         $apiAction = $extras['apiAction'];
