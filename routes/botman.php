@@ -108,7 +108,6 @@ $botman->group(['driver' => \BotMan\Drivers\Web\WebDriver::class], function ($bo
         $apiAction = $extras['apiAction'];
         $apiIntent = $extras['apiIntent'];
 
-        $bot->typesAndWaits(2);
         $bot->reply($apiReply);
     })->middleware($dialogflow);
 });
