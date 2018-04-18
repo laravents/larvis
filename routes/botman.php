@@ -35,6 +35,16 @@ $botman->group(['driver' => \BotMan\Drivers\Telegram\TelegramDriver::class], fun
         $bot->typesAndWaits(2);
         $bot->reply($apiReply." $currentYear");
     })->middleware($dialogflow);
+
+    $botman->hears('conferences.show', function (BotMan $bot) {
+        $extras = $bot->getMessage()->getExtras();
+        $apiReply = $extras['apiReply'];
+        $apiAction = $extras['apiAction'];
+        $apiIntent = $extras['apiIntent'];
+
+        $bot->typesAndWaits(2);
+        $bot->reply($apiReply);
+    })->middleware($dialogflow);
 });
 
 $botman->group(['driver' => \BotMan\Drivers\Slack\SlackDriver::class], function ($bot) use ($botman, $dialogflow) {
@@ -59,6 +69,16 @@ $botman->group(['driver' => \BotMan\Drivers\Slack\SlackDriver::class], function 
         $bot->typesAndWaits(2);
         $bot->reply($apiReply." $currentYear");
     })->middleware($dialogflow);
+
+    $botman->hears('conferences.show', function (BotMan $bot) {
+        $extras = $bot->getMessage()->getExtras();
+        $apiReply = $extras['apiReply'];
+        $apiAction = $extras['apiAction'];
+        $apiIntent = $extras['apiIntent'];
+
+        $bot->typesAndWaits(2);
+        $bot->reply($apiReply);
+    }
 });
 
 $botman->group(['driver' => \BotMan\Drivers\Web\WebDriver::class], function ($bot) use ($botman, $dialogflow) {
@@ -81,4 +101,14 @@ $botman->group(['driver' => \BotMan\Drivers\Web\WebDriver::class], function ($bo
 
         $bot->reply($apiReply." $currentYear");
     })->middleware($dialogflow);
+
+    $botman->hears('conferences.show', function (BotMan $bot) {
+        $extras = $bot->getMessage()->getExtras();
+        $apiReply = $extras['apiReply'];
+        $apiAction = $extras['apiAction'];
+        $apiIntent = $extras['apiIntent'];
+
+        $bot->typesAndWaits(2);
+        $bot->reply($apiReply);
+    }
 });
