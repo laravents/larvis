@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use BotMan\BotMan\BotMan;
-
 class BotManController extends Controller
 {
     /**
@@ -14,5 +12,13 @@ class BotManController extends Controller
         $botman = app('botman');
 
         $botman->listen();
+    }
+
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function tinker()
+    {
+        return view('tinker');
     }
 }
